@@ -9,7 +9,8 @@ def lighton(bot,update):
   from Adafruit_IO import Client
   aio = Client(ADAFRUIT_IO_USERNAME,ADAFRUIT_IO_KEY)
   aio.send('light',100)
-  data = aio.receive('LIGHT')
+  data = aio.receive('light')
+                     
   print('Received value: {0}'.format(data.value))
   
  def lightoff(bot,update):
@@ -20,7 +21,7 @@ def lighton(bot,update):
   from Adafruit_IO import Client
   aio = Client('JOEL_V_J',ADAFRUIT_IO_KEY)
   aio.send('light',0)
-  data = aio.receive('LIGHT')
+  data = aio.receive('light')
   print('Received value: {0}'.format(data.value))
   
  def fanon(bot,update):
@@ -31,7 +32,7 @@ def lighton(bot,update):
   from Adafruit_IO import Client
   aio = Client('JOEL_V_J',ADAFRUIT_IO_KEY)
   aio.send('fan',100)
-  data = aio.receive('FAN')
+  data = aio.receive('fan')
   print('Received value: {0}'.format(data.value))
   
   def fanoff(bot,update):
@@ -42,7 +43,7 @@ def lighton(bot,update):
   from Adafruit_IO import Client
   aio = Client('JOEL_V_J',ADAFRUIT_IO_KEY)
   aio.send('fan',0)
-  data = aio.receive('FAN')
+  data = aio.receive('fan')
   print('Received value: {0}'.format(data.value))
   
   def greeting(bot,update):
